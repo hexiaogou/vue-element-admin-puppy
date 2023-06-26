@@ -1,0 +1,9 @@
+{
+  "name": "vue-element-admin-puppy",
+  "dependencies": {
+
+  },
+  "devDependencies": {
+    "chokidar": "2.1.5"
+  }
+}
