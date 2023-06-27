@@ -4,3 +4,4 @@ const chalk = require('chalk')
 const path = require('path')
 const Mock = require('mockjs')
 
+module.exports = app => {}
