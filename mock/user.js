@@ -80,5 +80,16 @@ module.exports = [
                 data: 'success'
             }
         }
+    },
+
+    {
+        url: '/vue-element-admin-puppy/user/sign_in',
+        type: 'post',
+        response: _ => {
+            return {
+                code: 20000,
+                data: 'success'
+            }
+        }
     }
 ]
