@@ -3,7 +3,7 @@ const Mock = require('mockjs')
 const List = []
 const count = 100
 
-const baseContent = '<p>I am testing data, I am testing data.</p><p><img src="https://wpimg.wallstcn.com/4c69009c-0fd4-4153-b112-6cb53d1cf943"></p>'
+const baseContent = '<p>I am testing data, I am testing data.</p><p><img alt="" src="https://wpimg.wallstcn.com/4c69009c-0fd4-4153-b112-6cb53d1cf943"></p>'
 const image_uri = 'https://wpimg.wallstcn.com/e4558086-631c-425c-9430-56ffb46e70b3'
 
 for (let i = 0; i < count; i++) {
@@ -21,7 +21,7 @@ for (let i = 0; i < count; i++) {
         'status|1': ['published', 'draft'],
         display_time: '@datetime',
         comment_disabled: true,
-        pageviews: '@integer(300, 5000)',
+        page_views: '@integer(300, 5000)',
         image_uri,
         platforms: ['a-platform']
     }))
@@ -37,8 +37,8 @@ module.exports = [
             let mockList = List.filter(item => {
                 if (importance && item.importance !== +importance) return false
                 if (type && item.type !== type) return false
-                if (title && item.title.indexOf(title) < 0) return false
-                return true
+                return !(title && item.title.indexOf(title) < 0);
+
             })
 
             if (sort === '-id') {
