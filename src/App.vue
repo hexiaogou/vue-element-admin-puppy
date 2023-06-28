@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    puppy
+    <router-view/>
   </div>
 </template>
 
