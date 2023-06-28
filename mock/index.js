@@ -1,6 +1,5 @@
-const user = require('./user')
 const article = require('./article')
 
-const mocks = [...user,...article]
+const mocks = [...article]
 
 module.exports = { mocks }
