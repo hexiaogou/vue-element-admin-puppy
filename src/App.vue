@@ -1,6 +1,5 @@
 <template>
-  <div id="app" style="text-align: center">
-    puppy
+  <div id="app">
   </div>
 </template>
 
