@@ -8,7 +8,13 @@ Vue.use(Router)
  * a base page that does not have permission requirements
  * all roles can be accessed
  */
-export const constantRoutes = []
+export const constantRoutes = [
+    {
+        path: '/404',
+        component: () => import('@/views/error-page/404'),
+        hidden: true
+    }
+]
 
 const createRouter = () => new Router({
     scrollBehavior: () => ({ y: 0 }),
