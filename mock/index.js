@@ -1,7 +1,9 @@
 const user = require('./user')
+const role = require('./role')
 
 const mocks = [
-    ...user
+    ...user,
+    ...role
 ]
 
 module.exports = { mocks }
