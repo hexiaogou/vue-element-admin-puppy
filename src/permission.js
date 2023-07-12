@@ -1,11 +1,12 @@
 import router from './router'
-
-import {login} from '@/api/user'
+import store from './store'
 
 router.beforeEach(async (to, from, next) => {
-    login({username: 'admin', password: ''}).then(response => {
-        const {data} = response
-        console.log(data)
-    })
+    // get token by login
+    await store.dispatch('user/login',{username: 'admin',password:''})
+    // get roles by getInfo
+    const { roles } = await store.dispatch('user/getInfo')
+    // get permission_routes by generateRoutes
+    await store.dispatch('permission/generateRoutes', roles)
     next()
 })
