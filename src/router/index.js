@@ -21,6 +21,8 @@ export const constantRoutes = [
     }
 ]
 
+export const asyncRoutes = []
+
 const createRouter = () => new Router({
     scrollBehavior: () => ({ y: 0 }),
     routes: constantRoutes

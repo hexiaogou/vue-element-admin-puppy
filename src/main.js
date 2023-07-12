@@ -5,6 +5,7 @@ import Element from 'element-ui'
 import '@/styles/index.scss'
 
 import router from './router'
+import store from './store'
 
 import './permission'
 
@@ -13,5 +14,6 @@ Vue.use(Element)
 new Vue({
     el: '#app',
     router,
+    store,
     render: h => h(App)
 })
