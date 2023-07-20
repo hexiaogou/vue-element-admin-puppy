@@ -1,11 +1,15 @@
 <template>
-  <div :class="classObj" class="app-wrapper">Puppy</div>
+  <div :class="classObj" class="app-wrapper">
+    <sidebar class="sidebar-container" />
+  </div>
 </template>
 
 <script>
+import { Sidebar } from './components'
 import { mapState } from 'vuex'
 export default {
   name: 'Layout',
+  components: { Sidebar },
   computed: {
     ...mapState({
       sidebar: state => state.app.sidebar,

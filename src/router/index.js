@@ -14,22 +14,38 @@ export const constantRoutes = [
     {
         path: '/404',
         component: () => import('@/views/error-page/404'),
-        hidden: true
+        hidden: true,
+        meta: {
+            title: 'Not Pages',
+            icon: '404'
+        }
     },
     {
         path: '/401',
         component: () => import('@/views/error-page/401'),
-        hidden: true
+        hidden: true,
+        meta: {
+            title: 'Error Pages',
+            icon: '401'
+        }
     },
     {
         path: '/auth-redirect',
         component: () => import('@/views/login/auth-redirect'),
-        hidden: true
+        hidden: true,
+        meta: {
+            title: 'Auth-Redirect',
+            icon: '404'
+        }
     },
     {
         path: '/layout',
         component: Layout,
-        hidden: true
+        hidden: true,
+        meta: {
+            title: 'Layout Page',
+            icon: '404'
+        },
     }
 ]
 
