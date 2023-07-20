@@ -8,5 +8,6 @@ router.beforeEach(async (to, from, next) => {
     const { roles } = await store.dispatch('user/getInfo')
     // get permission_routes by generateRoutes
     await store.dispatch('permission/generateRoutes', roles)
+    console.log(store)
     next()
 })

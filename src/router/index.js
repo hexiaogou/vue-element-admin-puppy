@@ -3,6 +3,8 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
+import Layout from '@/layout'
+
 /**
  * constantRoutes
  * a base page that does not have permission requirements
@@ -22,6 +24,11 @@ export const constantRoutes = [
     {
         path: '/auth-redirect',
         component: () => import('@/views/login/auth-redirect'),
+        hidden: true
+    },
+    {
+        path: '/layout',
+        component: Layout,
         hidden: true
     }
 ]
