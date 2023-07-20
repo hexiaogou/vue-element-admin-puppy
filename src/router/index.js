@@ -18,6 +18,11 @@ export const constantRoutes = [
         path: '/401',
         component: () => import('@/views/error-page/401'),
         hidden: true
+    },
+    {
+        path: '/auth-redirect',
+        component: () => import('@/views/login/auth-redirect'),
+        hidden: true
     }
 ]
 
