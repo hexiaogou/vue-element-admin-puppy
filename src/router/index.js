@@ -48,13 +48,13 @@ export const constantRoutes = [
         },
         children: [
             {
-                path: 'index',
+                path: 'index-1',
                 component: Layout,
                 name: 'layout-sub',
                 meta: { title: 'Layout Sub-1', icon: 'guide', noCache: true }
             },
             {
-                path: 'index',
+                path: 'index-2',
                 component: Layout,
                 name: 'Layout Sub-2',
                 meta: { title: 'Layout Sub', icon: 'bug', noCache: true }
