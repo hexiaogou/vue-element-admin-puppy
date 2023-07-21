@@ -41,11 +41,19 @@ export const constantRoutes = [
     {
         path: '/layout',
         component: Layout,
-        hidden: true,
+        hidden: false,
         meta: {
             title: 'Layout Page',
             icon: '404'
         },
+        children: [
+            {
+                path: 'index',
+                component: Layout,
+                name: 'layout-sub',
+                meta: { title: 'Layout Sub', icon: 'guide', noCache: true }
+            }
+        ]
     }
 ]
 

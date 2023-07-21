@@ -12,7 +12,7 @@
           :collapse-transition="false"
           mode="vertical"
       >
-
+        <sidebar-item v-for="route in permission_routes" :key="route.path" :item="route" :base-path="route.path" />
       </el-menu>
     </el-scrollbar>
   </div>
@@ -21,11 +21,13 @@
 <script>
 import {mapGetters} from 'vuex'
 import Logo from './Logo'
+import SidebarItem from './SidebarItem'
 import variables from '@/styles/variables.scss'
 
 export default {
   components: {
-    Logo
+    Logo,
+    SidebarItem
   },
   computed: {
     ...mapGetters([
