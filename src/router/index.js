@@ -51,7 +51,13 @@ export const constantRoutes = [
                 path: 'index',
                 component: Layout,
                 name: 'layout-sub',
-                meta: { title: 'Layout Sub', icon: 'guide', noCache: true }
+                meta: { title: 'Layout Sub-1', icon: 'guide', noCache: true }
+            },
+            {
+                path: 'index',
+                component: Layout,
+                name: 'Layout Sub-2',
+                meta: { title: 'Layout Sub', icon: 'bug', noCache: true }
             }
         ]
     }
