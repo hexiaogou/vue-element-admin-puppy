@@ -44,7 +44,7 @@ export const constantRoutes = [
         hidden: false,
         meta: {
             title: 'Layout Page',
-            icon: '404'
+            icon: 'guide'
         },
         children: [
             {
